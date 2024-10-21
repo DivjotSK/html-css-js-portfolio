@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Divjot Singh Kamboj</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Technical Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>   
+        </div>    
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Divjot Singh Kamboj</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Technical Skills</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Profile Section -->
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/Profile-pic-1000x1000.png" alt="Divjot Singh Kamboj Profile Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Divjot Singh Kamboj</h1>
+            <p class="section__text__p2">Computer Engineer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Resume__DSK.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/divjot-singh-kamboj/'" />
+                <img src="./assets/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://github.com/DivjotSK'" />
+            </div>
+        </div>
+    </section>
+
+   <!-- About Section -->
+<section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="about-wrapper">
+        
+        <!-- Education Box -->
+        <div class="about-box">
+            <img src="./assets/education.png" alt="Education Icon" class="about-icon">
+            <h3>Education</h3>
+            <p>Bachelor of Engineering (B.Eng)</p>
+            <span>Computer Engineering</span>
+            <div class="about-details">
+                <p>• Relevant coursework:</p>
+                <ul class="course-list">
+                    <li>Algorithms and Data Structures (C)</li>
+                    <li>Advanced Algorithms (Java)</li>
+                    <li>Digital Systems (VHDL/FPGA)</li>
+                    <li>Object-Oriented Engineering Analysis and Design (Java)</li>
+                    <li>Electronic Circuits (Analog Design)</li>
+                    <li>Microprocessors (Assembly)</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Experience Box -->
+        <div class="about-box">
+            <img src="./assets/experience.png" alt="Experience Icon" class="about-icon">
+            <h3>Experience</h3>
+            <p>4 years</p>
+            <span>Summer Camp Counsellor</span>
+            <div class="about-details">
+                <p>• Instructed participants in coding, game design, and LEGO robotics, enhancing their understanding of engineering principles.</p>
+                <p>• Organized and managed educational and recreational activities, improving problem-solving and collaboration skills.</p>
+                <p>• Developed communication and leadership abilities through interactions with campers, parents, and staff.</p>
+                <p>• Facilitated clear communication among camp staff, ensuring smooth coordination of daily schedules and effective resolution of camper-related issues.</p>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+</section>
+</section>
+
+
+
+  <!-- Skills Section -->
+<section id="skills">
+    <h2 class="title">Technical Skills</h2>
+    <div class="skills-wrapper">
+        <!-- Languages Box -->
+        <div class="skills-box">
+            <h3>Languages</h3>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>HTML</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>CSS</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>Java</p>
+                        <span>Experienced</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>C</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>VHDL</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>Python</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools/Platforms Box -->
+        <div class="skills-box">
+            <h3>Tools/Platforms</h3>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>Quartus</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>Windows</p>
+                        <span>Experienced</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>Linux</p>
+                        <span>Basic</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>Multisim</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>MATLAB</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>Altera FPGA</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
+                    <div>
+                        <p>Oscilloscopes</p>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects">
+    
+    <h2 class="title">Projects</h2>
+    <div class="projects-wrapper">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="./assets/MultistageAmplifier.png" alt="Project One" class="project-img">
+            <h3 class="project-title">Multistage Amplifier</h3>
+            <div class="project-buttons">
+                <button class="project-btn" onclick="window.open('https://github.com/DivjotSK/Multistage-Amplifier')">Github</button>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="./assets/BankingApplication.png" alt="Project Two" class="project-img">
+            <h3 class="project-title">Banking Application System</h3>
+            <div class="project-buttons">
+                <button class="project-btn" onclick="window.open('https://github.com/DivjotSK/BankingApplication')">Github</button>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="./assets/alteraFPGA.png" alt="Project Three" class="project-img">
+            <h3 class="project-title">Simple General-Purpose Processor</h3>
+            <div class="project-buttons">
+                <button class="project-btn" onclick="window.open('https://github.com/your-github-link')">Github</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+            <img 
+            src="./assets/email.png" 
+            alt="Email icon" 
+            class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:dkamboj@torontomu.ca">dkamboj@torontomu.ca</a>
+            </p>
+        </div>
+        <div class="contact-info-container">
+            <img 
+            src="./assets/linkedin.png" 
+            alt="LinkedIn icon" 
+            class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/divjot-singh-kamboj/">LinkedIn</a>
+            </p>
+        </div>
+    </div>
+</section>
+<footer>
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Technical Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p>Copyright &#169; 2024 Divjot Singh Kamboj. All Rights Reserved</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
