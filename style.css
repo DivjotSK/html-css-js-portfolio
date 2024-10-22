@@ -596,3 +596,114 @@ footer{
 footer p{
     text-align: center;
 }
+
+@media screen and (max-width: 1400px) {
+    #profile{
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+
+    .about-containers{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #desktop-nav{
+        display: none;
+    }
+
+    #hamburger-nav{
+        display:flex;
+    }
+
+    .hamburger-icon{
+        position: relative;
+        margin-top: -2%;
+        margin-left: -75%;
+    }
+
+    #skills, .skills-box{
+        margin-top: 2rem;
+    }
+
+    #profile, .section-container{
+        display: block;
+        align-items: center;
+    }
+
+    section, .section-container{
+        height: fit-content;
+    }
+
+    section{
+        margin: 0 5%
+    }
+
+    .section__pic-container{
+        width: 250px;
+        height: 250px;
+        margin: 0 auto 2rem;
+    }
+
+    .section__text__p1{
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        text-align: center; /* Aligns the text in the center */
+        
+        
+    }
+
+   
+   
+
+    .title{
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        text-align: center; /* Aligns the text in the center */
+    }
+
+    .logo{
+        font-size: 1.25rem;
+        flex:auto;
+        margin-left: 3%;
+    }
+
+    .skills-box{
+        width: 90%; /* Adjust width to be responsive */
+        max-width: 400px; /* Set a max width for larger screens */
+        margin: 0 auto; /* Centers the box horizontally */
+        padding: 20px; /* Adds some padding inside the box */
+        box-sizing: border-box; /* Ensures padding doesn't increase width */
+        background-color: #fff; /* Keeps the background color */
+        border-radius: 10px; /* Adds rounded corners */
+        overflow: hidden; /* Prevents overflow issues */
+    }
+
+    .contact-info-upper-container{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        font-size: 1.2rem;
+        gap:0.5px;
+        text-align: center;
+    }
+
+    .nav{
+        margin-bottom: 10px;
+    }
+
+    
+
+    
+
+
+   
+
+
+}
