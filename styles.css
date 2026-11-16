@@ -82,3 +82,49 @@ footer { border-top: 1px solid var(--line); color: var(--quiet); }
     border-color: var(--accent);
   }
 }
+
+.case-link { color: var(--accent); }
+.case-study .hero h1 { font-size: clamp(3rem, 10vw, 8rem); }
+.case-copy { max-width: 68ch; margin-bottom: 26px; }
+.case-copy h2 { margin-top: 10px; }
+.case-copy p + p { margin-top: 12px; }
+.case-study figure { margin: 0; min-width: 0; }
+.case-study figure img { display: block; max-width: 100%; max-height: 430px; object-fit: contain; background: var(--panel); border: 1px solid var(--line); }
+.case-study figcaption { color: var(--quiet); margin-top: 10px; font-size: .9rem; }
+.case-figures { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.case-study video { max-width: 720px; }
+@media (max-width: 720px) {
+  .case-figures { grid-template-columns: 1fr; }
+}
+
+.chassis-comparison {
+  margin: 0;
+  padding: clamp(12px, 3vw, 24px);
+  min-inline-size: 0;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+.chassis-comparison legend { padding-inline: 8px; color: var(--quiet); }
+.chassis-comparison input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.chassis-comparison label {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 4px 10px 0;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.chassis-comparison input:checked + label { background: var(--accent); color: var(--ground); }
+.chassis-comparison input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 3px; }
+.chassis-comparison figure { display: none; margin-top: 8px; }
+#chassis-before:checked ~ .build-before,
+#chassis-after:checked ~ .build-after { display: block; }
+.chassis-comparison figure a { display: block; width: fit-content; max-width: 100%; margin-inline: auto; }
+.chassis-comparison figure img { height: clamp(235px, 50vw, 480px); width: auto; max-height: none; }
+.chassis-comparison figcaption { text-align: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .chassis-comparison figure { animation: reveal-build 230ms ease-out; }
+  @keyframes reveal-build {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
