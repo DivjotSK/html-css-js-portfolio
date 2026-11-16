@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How Divjot Singh Kamboj designed, fabricated, and tested the hardware for a Raspberry Pi rover.">
+<title>SCAMPER Rover · Divjot Singh Kamboj</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+<header><div class="shell bar">
+  <a class="brand" href="index.html">DSK<span> / </span>Portfolio</a>
+  <nav aria-label="Main navigation"><a href="index.html#work">Selected work</a><a href="index.html#contact">Contact</a></nav>
+</div></header>
+<main class="shell case-study">
+  <section class="hero" aria-labelledby="case-title">
+    <p class="label">ROBOTICS CAPSTONE / HARDWARE LEAD</p>
+    <h1 id="case-title">SCAMPER <em>Rover.</em></h1>
+    <p class="intro">A Raspberry Pi rover that demonstrates gesture control, colour tracking, and ultrasonic obstacle avoidance. I led the mechanical and electrical hardware work, from CAD and 3D printing to circuit assembly and PCB design.</p>
+    <div class="actions"><a class="button" href="#demo">Watch the rover ↓</a><a href="#pcb">See the PCB ↓</a></div>
+  </section>
+  <section aria-labelledby="chassis-title">
+    <div class="case-copy">
+      <p class="label">MECHANICAL DESIGN</p>
+      <h2 id="chassis-title">From LEGO to a printed chassis</h2>
+      <p>The team started with a LEGO chassis to prototype the rover. I redesigned the structure in Fusion 360 and 3D printed the chassis, giving us a more stable platform for mounting the electronics and drive components.</p>
+    </div>
+    <fieldset class="chassis-comparison">
+      <legend>Explore the two builds</legend>
+      <input type="radio" name="chassis" id="chassis-before" checked>
+      <label for="chassis-before">01 · LEGO prototype</label>
+      <input type="radio" name="chassis" id="chassis-after">
+      <label for="chassis-after">02 · 3D-printed build</label>
+      <figure class="build-before"><a href="assets/rover-lego.png"><img src="assets/rover-lego.png" alt="Original LEGO rover with exposed electronics and yellow wheels" loading="lazy"></a><figcaption><strong>Before.</strong> LEGO frame, exposed breadboard, and a wheeled drivetrain.</figcaption></figure>
+      <figure class="build-after"><a href="assets/rover-chassis.png"><img src="assets/rover-chassis.png" alt="Final rover with an orange 3D-printed chassis and black treads" loading="lazy"></a><figcaption><strong>After.</strong> Custom printed mounting plates and a tracked drivetrain.</figcaption></figure>
+    </fieldset>
+  </section>
+  <section id="pcb" aria-labelledby="pcb-title">
+    <div class="case-copy">
+      <p class="label">ELECTRICAL DESIGN</p>
+      <h2 id="pcb-title">What the PCB tests revealed</h2>
+      <p>I designed a custom KiCad PCB to replace the breadboard wiring. The board passed electrical and layout checks. On the bench, it powered the Raspberry Pi and sensors, but the motor driver connections failed to operate the motors.</p>
+      <p>A new board would have needed another fabrication cycle. We moved the circuit to a solderable breadboard and powered the rover from its rechargeable battery for the final build.</p>
+    </div>
+    <div class="case-figures">
+      <figure><a href="assets/rover-pcb.png"><img src="assets/rover-pcb.png" alt="KiCad PCB layout for the rover" loading="lazy"></a><figcaption>PCB layout. Select the image to view it at full size.</figcaption></figure>
+      <figure><a href="assets/rover-schematic.png"><img src="assets/rover-schematic.png" alt="Electrical schematic for the rover PCB" loading="lazy"></a><figcaption>Circuit schematic. Select the image to view it at full size.</figcaption></figure>
+    </div>
+  </section>
+  <section id="demo" aria-labelledby="demo-title">
+    <div class="case-copy">
+      <p class="label">TEAM DEMONSTRATION</p>
+      <h2 id="demo-title">The rover in motion</h2>
+      <p>The team’s software used camera input to recognize hand gestures and send movement commands to the rover. This clip shows gesture control on the 3D-printed build.</p>
+    </div>
+    <video controls playsinline preload="metadata" aria-label="SCAMPER rover gesture control demonstration" src="assets/Gesture3D.mp4"></video>
+  </section>
+</main>
+<footer class="shell bar"><a href="index.html#work">← Back to selected work</a><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
