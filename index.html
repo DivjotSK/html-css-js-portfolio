@@ -1,297 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Divjot Singh Kamboj's computer engineering portfolio, featuring embedded systems, digital design, and software.">
+<title>Divjot Singh Kamboj · Computer Engineering</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Divjot Singh Kamboj</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Technical Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>   
-        </div>    
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Divjot Singh Kamboj</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Technical Skills</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </ul>
+<body id="top">
+<header><div class="shell bar">
+  <a class="brand" href="#top">DSK<span> / </span>Portfolio</a>
+  <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main class="shell">
+  <section class="hero" aria-labelledby="intro">
+    <p class="label">DIVJOT SINGH KAMBOJ / COMPUTER ENGINEERING</p>
+    <h1 id="intro">Hardware.<br><em>Software.</em></h1>
+    <p class="intro">I’m a Toronto Metropolitan University computer engineering student. I design and prototype robot hardware, and I’ve built APIs and web interfaces in industry.</p>
+    <div class="actions"><a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a href="https://github.com/DivjotSK">GitHub ↗</a></div>
+  </section>
+  <section id="work" aria-labelledby="work-title">
+    <h2 id="work-title">Selected work</h2>
+    <article class="feature">
+      <div class="feature-copy">
+        <p class="label">ROBOTICS CAPSTONE / HARDWARE LEAD</p>
+        <h3>SCAMPER Rover</h3>
+        <p>A Raspberry Pi rover built to demonstrate hand gesture control, colour tracking, and ultrasonic obstacle avoidance.</p>
+        <p><strong>My contribution.</strong> I designed the chassis in CAD, 3D printed the hardware, built the circuitry, and designed the custom PCB in KiCad.</p>
+        <details><summary>How the hardware evolved</summary><p>The team replaced the original LEGO chassis with a 3D-printed design. I designed a custom PCB to make the wiring more compact and reliable. It passed design checks and powered the Pi and sensors, but the motors failed to run during hardware testing. We used a solderable breadboard for the final build.</p></details>
+      </div>
+      <div class="demo">
+        <video id="rover-video" controls playsinline preload="metadata" aria-label="SCAMPER rover gesture control demo" src="assets/Gesture3D.mp4"></video>
+        <div class="video-options" role="group" aria-label="Choose a robot demonstration">
+          <button type="button" aria-pressed="true" data-video="assets/Gesture3D.mp4">Gesture control</button>
+          <button type="button" aria-pressed="false" data-video="assets/Manual%20Ball%20Follow.mp4">Ball tracking</button>
         </div>
-    </nav>
-    
-    <!-- Profile Section -->
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/Profile-pic-1000x1000.png" alt="Divjot Singh Kamboj Profile Picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Divjot Singh Kamboj</h1>
-            <p class="section__text__p2">Computer Engineer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Resume__DSK.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/divjot-singh-kamboj/'" />
-                <img src="./assets/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://github.com/DivjotSK'" />
-            </div>
-        </div>
-    </section>
-
-   <!-- About Section -->
-<section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="about-wrapper">
-        
-        <!-- Education Box -->
-        <div class="about-box">
-            <img src="./assets/education.png" alt="Education Icon" class="about-icon">
-            <h3>Education</h3>
-            <p>Bachelor of Engineering (B.Eng)</p>
-            <span>Computer Engineering</span>
-            <div class="about-details">
-                <p>Relevant coursework:</p>
-                <ul class="course-list">
-                    <li>Algorithms and Data Structures (C)</li>
-                    <li>Advanced Algorithms (Java)</li>
-                    <li>Digital Systems (VHDL/FPGA)</li>
-                    <li>Object-Oriented Engineering Analysis and Design (Java)</li>
-                    <li>Electronic Circuits (Analog Design)</li>
-                    <li>Microprocessors (Assembly)</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Experience Box -->
-        <div class="about-box">
-            <img src="./assets/experience.png" alt="Experience Icon" class="about-icon">
-            <h3>Experience</h3>
-            <div class="about-details">
-             <p>4 years</p>
-             <span>Summer Camp Counsellor</span>
-                <ul class="course-list">
-                    <li>Instructed participants in coding, game design, and LEGO robotics, enhancing their understanding of engineering principles.</li>
-                    <li>Organized and managed educational and recreational activities, improving problem-solving and collaboration skills.</li>
-                    <li>Developed communication and leadership abilities through interactions with campers, parents, and staff.</li>
-                    <li>Facilitated clear communication among camp staff, ensuring smooth coordination of daily schedules and effective resolution of camper-related issues.</li>
-                </ul>
-            </div>
-        </div>
-
-        
+      </div>
+    </article>
+    <div class="projects">
+      <article><p class="label">DIGITAL DESIGN</p><h3>8-bit FPGA Processor</h3><p>Designed a general-purpose processor around an ALU and finite-state control unit, using VHDL and Quartus to validate the design.</p><a href="https://github.com/DivjotSK/Simple-General-Purpose-Processor">Design report ↗</a></article>
+      <article><p class="label">SOFTWARE</p><h3>Banking Application</h3><p>Built a JavaFX desktop application with customer transactions and manager workflows. Used class and use-case diagrams to map the design.</p><a href="https://github.com/DivjotSK/BankingApplication">Code and diagrams ↗</a></article>
+      <article><p class="label">ANALOG CIRCUITS</p><h3>Multistage Amplifier</h3><p>Designed and simulated a two-stage BJT amplifier in Multisim, evaluating gain and output swing under different loads.</p><a href="https://github.com/DivjotSK/Multistage-Amplifier">Design and simulation ↗</a></article>
     </div>
-
-    
-</section>
-</section>
-
-
-
-  <!-- Skills Section -->
-<section id="skills">
-    <h2 class="title">Technical Skills</h2>
-    <div class="skills-wrapper">
-        <!-- Languages Box -->
-        <div class="skills-box">
-            <h3>Languages</h3>
-            <div class="skills-list">
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>HTML</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>CSS</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>Java</p>
-                        <span>Experienced</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>C</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>VHDL</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>Python</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tools/Platforms Box -->
-        <div class="skills-box">
-            <h3>Tools/Platforms</h3>
-            <div class="skills-list">
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>Quartus</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>Windows</p>
-                        <span>Experienced</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>Linux</p>
-                        <span>Basic</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>Multisim</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>MATLAB</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>Altera FPGA</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <img src="./assets/checkmark.png" alt="Checkmark" class="checkmark-icon">
-                    <div>
-                        <p>Oscilloscopes</p>
-                        <span>Intermediate</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</section>
-</section>
-
-
-<!-- Projects Section -->
-<section id="projects">
-    
-    <h2 class="title">Projects</h2>
-    <div class="projects-wrapper">
-        <!-- Project 1 -->
-        <div class="project-card">
-            <img src="./assets/MultistageAmplifier.png" alt="Project One" class="project-img">
-            <h3 class="project-title">Multistage Amplifier</h3>
-            <div class="project-buttons">
-                <button class="project-btn" onclick="window.open('https://github.com/DivjotSK/Multistage-Amplifier')">Github</button>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-            <img src="./assets/BankingApplication.png" alt="Project Two" class="project-img">
-            <h3 class="project-title">Banking Application System</h3>
-            <div class="project-buttons">
-                <button class="project-btn" onclick="window.open('https://github.com/DivjotSK/BankingApplication')">Github</button>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-            <img src="./assets/alteraFPGA.png" alt="Project Three" class="project-img">
-            <h3 class="project-title">Simple General-Purpose Processor</h3>
-            <div class="project-buttons">
-                <button class="project-btn" onclick="window.open('https://github.com/DivjotSK/Simple-General-Purpose-Processor')">Github</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-            <img 
-            src="./assets/email.png" 
-            alt="Email icon" 
-            class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:dkamboj@torontomu.ca">dkamboj@torontomu.ca</a>
-            </p>
-        </div>
-        <div class="contact-info-container">
-            <img 
-            src="./assets/linkedin.png" 
-            alt="LinkedIn icon" 
-            class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com/in/divjot-singh-kamboj/">LinkedIn</a>
-            </p>
-        </div>
-    </div>
-</section>
-<footer>
-    <nav>
-        <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Technical Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <p>Copyright &#169; 2024 Divjot Singh Kamboj. All Rights Reserved</p>
-</footer>
-
-    <script src="script.js"></script>
+  </section>
+  <section id="experience" aria-labelledby="experience-title">
+    <h2 id="experience-title">Experience</h2>
+    <div class="role"><h3>Explorer Robotics <span>Robotics &amp; STEM Instructor</span></h3><p>Teach Python and robotics, and guide students through electronics, ESP32 and Raspberry Pi programming, and 3D prototyping.</p></div>
+    <div class="role"><h3>UNUHR <span>Full Stack Developer Intern</span></h3><p>Built REST APIs for hiring workflows, added JWT authentication and validation, and wrote tests for backend behavior.</p></div>
+    <div class="role"><h3>Musey <span>Web Developer Intern</span></h3><p>Focused on UI design and WordPress, prototyping layouts in Figma and improving responsive navigation.</p></div>
+  </section>
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Get in touch</h2>
+    <p>I’m interested in embedded systems, digital and chip design, backend engineering, and applied AI.</p>
+    <div class="actions"><a class="button" href="mailto:kambojdivjotsingh@gmail.com">Email me ↗</a><a href="https://www.linkedin.com/in/divjot-singh-kamboj/">LinkedIn ↗</a><a href="https://github.com/DivjotSK">GitHub ↗</a></div>
+  </section>
+</main>
+<footer class="shell bar"><span>Divjot Singh Kamboj</span><a href="#top">Back to top ↑</a></footer>
+<script src="portfolio.js"></script>
 </body>
 </html>
