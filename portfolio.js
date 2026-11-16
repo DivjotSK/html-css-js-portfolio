@@ -14,3 +14,27 @@ for (const choice of choices) {
     }
   });
 }
+
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+    'IntersectionObserver' in window &&
+    typeof Element.prototype.animate === 'function') {
+  const reveal = (element, delay = 0) => element.animate(
+    [{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'translateY(0)' }],
+    { duration: 480, delay, easing: 'cubic-bezier(.2,.65,.3,1)', fill: 'backwards' }
+  );
+
+  document.querySelectorAll('.hero > *').forEach((element, index) => reveal(element, index * 75));
+
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      const focused = entry.target.contains(document.activeElement);
+      if (!focused) reveal(entry.target);
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.feature, .projects article, .role').forEach((element) => {
+    observer.observe(element);
+  });
+}

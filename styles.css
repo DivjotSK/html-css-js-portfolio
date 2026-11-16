@@ -63,3 +63,22 @@ footer { border-top: 1px solid var(--line); color: var(--quiet); }
   nav, .bar { gap: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .projects article {
+    transition: transform 180ms ease, border-color 180ms ease;
+  }
+
+  .projects article:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+
+  .button, .video-options button {
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+  }
+
+  .video-options button:hover {
+    border-color: var(--accent);
+  }
+}
